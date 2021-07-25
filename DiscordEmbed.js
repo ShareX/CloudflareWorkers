@@ -6,7 +6,7 @@ async function handleRequest(request) {
       const contentType = response.headers.get("content-type");
       if (contentType && contentType.startsWith("image/")) {
         const url = new URL(request.url);
-        const filename = url.pathname.substr(url.pathname.lastIndexOf("/") + 1);
+        const filename = decodeURIComponent(url.pathname.substr(url.pathname.lastIndexOf("/") + 1));
         const title = "ShareX";
         const description = filename;
         const color = "#00aff4";
@@ -16,9 +16,8 @@ async function handleRequest(request) {
   <meta charset="utf-8">
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="${color}">
-  <meta name="description" content="${decodeURIComponent(description)}">
   <meta property="og:title" content="${title}">
-  <meta property="og:description" content="${decodeURIComponent(description)}">
+  <meta property="og:description" content="${description}">
   <meta property="og:image" content="${url.toString()}">
   <meta property="twitter:card" content="summary_large_image">
 </head>
