@@ -27,7 +27,7 @@ async function handleRequest(request) {
 </body>
 </html>`, {
           headers: {
-            "content-type": "text/html"
+            "content-type": "text/html; charset=UTF-8"
           }
         });
       }
