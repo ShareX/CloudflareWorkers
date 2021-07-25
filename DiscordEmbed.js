@@ -16,9 +16,9 @@ async function handleRequest(request) {
   <meta charset="utf-8">
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="${color}">
-  <meta name="description" content="${description}">
+  <meta name="description" content="${decodeURIComponent(description)}">
   <meta property="og:title" content="${title}">
-  <meta property="og:description" content="${description}">
+  <meta property="og:description" content="${decodeURIComponent(description)}">
   <meta property="og:image" content="${url.toString()}">
   <meta property="twitter:card" content="summary_large_image">
 </head>
