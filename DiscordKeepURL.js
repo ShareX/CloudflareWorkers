@@ -9,6 +9,9 @@ async function handleRequest(request) {
 <head>
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:image" content="${request.url}">
+  <meta name="twitter:player" content="${request.url}">
+<meta name="twitter:player:height" content="360">
+<meta name="twitter:player:width" content="640">
 </head>
 </html>`, {
           headers: {
