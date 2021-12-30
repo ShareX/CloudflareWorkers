@@ -20,6 +20,9 @@ async function handleRequest(request) {
   <meta property="og:description" content="${description}">
   <meta property="og:image" content="${url.toString()}">
   <meta property="twitter:card" content="summary_large_image">
+  <meta name="twitter:player" content="${request.url}">
+<meta name="twitter:player:height" content="360">
+<meta name="twitter:player:width" content="640">
 </head>
 <body>
   <img src="${url.toString()}">
