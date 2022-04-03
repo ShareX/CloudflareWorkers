@@ -6,7 +6,7 @@ async function handleRequest(request) {
       const contentType = response.headers.get("content-type");
       if (contentType && contentType.startsWith("image/")) {
         const url = new URL(request.url);
-        const filename = decodeURIComponent(url.pathname.substr(url.pathname.lastIndexOf("/") + 1));
+        const filename = decodeURIComponent(url.pathname.slice(url.pathname.lastIndexOf("/") + 1));
         const title = "ShareX";
         const description = filename;
         const color = "#00aff4";
