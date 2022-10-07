@@ -1,5 +1,8 @@
 ## Using Cloudflare Workers for Discord embed support
 
+> **Warning**
+> This is unsupported, and functions mostly as a proof of concept.  There will be very limited assistance in the Discord for this.
+
 Requirements: Your own image host, on a domain that you control via [Cloudflare](https://www.cloudflare.com).
 
 Limitations: 100,000 requests per day (where the embed works).
